@@ -1,27 +1,31 @@
 
 
 
-Solr Import Queue
+<h1>Solr Import Queue</h1>
 
-A node server that provides a REST api to moderate solr import jobs
+<h2>Basic Idea</h2>
+
+A nodejs server that provides a REST api to moderate solr import jobs
 between two RabbitMQ queues. 
+
+<h2>Less Basic...</h2>
 
 The developers will "request" an import be run for a certain import
 type and certain time window by putting a message on the first queue.
 
 Ops will allow messages to move from the request queue to the 
-approved queue via a REST call to node arbitrator.
+approved queue via a REST call to the nodejs arbitrator.
 
-The node worker will pick the message up from the approved queue 
+The nodejs worker will pick up the message from the approved queue 
 and make sure that the correct command line import is run.
 
 
-Goals:
+<h2>Goals</h2>
 
-Backwards compatiblility in the import process
+<h3>Backwards compatiblility in the import process</h3>
 	the command line imports will work just like they always have
 
-Simplicity/Decoupled
+<H3>Simplicity/Decoupled</h3>
 	the logic for the import moderation is built into this small
 	service instead of being put into the already complicated
 	import code
