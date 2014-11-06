@@ -41,7 +41,7 @@ GET /request_status
 	requested queue
 
 example reponse:
-
+```javascript
 {
     "num_requests":"2",
     "requests":{
@@ -54,27 +54,29 @@ example reponse:
 	{...}
     }
 }
-
+```
 
 POST /request_import
 
+```javascript
 {
    "type":"page",
    "start":"2013-01-01",
    "end":"2013-02-01"
 }
-
+```
 
 
 example import request message json
 
+```javascript
 {
     "type": "page",
     "start": "2013-01-01",
     "end": "2013-02-01",
     "submitted": "2014-10-31 14:22:23"
 }
-
+```
 
 
 
