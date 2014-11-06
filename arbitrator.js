@@ -1,7 +1,5 @@
 /*
- * my first express app?
- * http://blog.modulus.io/nodejs-and-express-create-rest-api
- *
+ * Import Queue arbitrator server and REST api
  *
  */ 
 
