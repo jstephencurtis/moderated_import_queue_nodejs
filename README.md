@@ -22,26 +22,19 @@ and make sure that the correct command line import is run.
 
 <h2>Goals</h2>
 
-<h3>Backwards compatiblility in the import process</h3>
-	the command line imports will work just like they always have
+Backwards compatiblility with the existing import process,the command line imports will work just like they always have.
 
-<H3>Simplicity/Decoupled</h3>
-	the logic for the import moderation is built into this small
-	service instead of being put into the already complicated
-	import code
+Simplistic Design; the logic for the import moderation is built into this small	service instead of being put into the already complex import code.
 
-Transparency
-	the REST api will expose lots of info about the state of the 
-	queues and individual imports and will log a lot so that 
-	ops can track down what happened if there is ever an issue
+Transparent; the REST api will expose lots of info about the state of the queues and individual imports and will log a lot so that ops can track down what happened if there is ever an issue.
 
 
-Setup
+<h2>Setup</h2>
 
 npm install  (this will install nodejs dependencies from package.json)
 
 
-Use
+<h2>Api Reference</h2>
 
 GET /request_status
 	this returns a json object representing all imports in the 
