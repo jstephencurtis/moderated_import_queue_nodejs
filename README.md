@@ -64,8 +64,29 @@ POST /request_import
    "start":"2013-01-01",
    "end":"2013-02-01"
 }
-```
 
+```
+eg. 
+
+curl -H "content-type:application/json" "http://localhost:2929/request_import" -d '{
+   "type":"page",
+   "start":"2013-01-01",
+   "end":"2013-02-01"
+}
+'
+
+returns
+
+{
+    "status":"successful",
+    "action":"request_import",
+    "import":
+	{
+   		"type":"page",
+   		"start":"2013-01-01",
+   		"end":"2013-02-01"
+	}
+}
 
 example import request message json
 
